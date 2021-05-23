@@ -1,0 +1,37 @@
+<%- include("../partials/header")%>
+<%- include("../partials/navbar")%>
+
+
+
+<div class="container" style="margin-top:3rem;width:80vw">
+ 
+            <form class="validated-form" action="/blogs" method="POST" style="max-width:70%;margin:10px auto" novalidate required>
+                <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" placeholder="Product Title" name="blog[title]" required>
+                  <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3">
+                  <label for="img" class="form-label">Image URL</label>
+                  <input type="text" class="form-control" id="img" placeholder="Image URL" name="blog[img]" required>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Category</label>
+                    <input type="text" class="form-control" id="category" placeholder="category" name="blog[category]" required>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" placeholder="date" name="blog[date]" required>
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Description</label>
+                    <textarea class="form-control" id="desc" cols="30" rows="5" name="blog[desc]" required></textarea>
+                </div>
+               
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
+        
+   
+</div>
+
+<%- include("../partials/footer")%>
